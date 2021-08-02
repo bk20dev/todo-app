@@ -1,5 +1,5 @@
 const Footer = () => (
-  <footer className="sticky top-full p-6">
+  <footer className="sticky top-full p-6 mt-12">
     <p className="text-gray text-center text-sm">
       created by&nbsp;
       <a
