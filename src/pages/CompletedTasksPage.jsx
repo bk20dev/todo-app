@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import EmptyListImage from '../assets/undraw_Imagination_re_i0xi.svg';
 import TodoList from '../components/TodoList';
-import { toggle, remove, clear } from '../reducers/tasksReducer';
+import { toggle, remove, clear } from '../reducers/tasksSlice';
 
 const CompletedTasksPage = () => {
   const tasks = useSelector((state) => state.tasks);

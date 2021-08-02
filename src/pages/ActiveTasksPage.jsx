@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import EmptyListImage from '../assets/undraw_empty_street_sfxm.svg';
 import TodoForm from '../components/TodoForm';
 import TodoList from '../components/TodoList';
-import { toggle } from '../reducers/tasksReducer';
+import { toggle } from '../reducers/tasksSlice';
 
 const ActiveTasksPage = () => {
   const tasks = useSelector((state) => state.tasks);

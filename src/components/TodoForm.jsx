@@ -1,20 +1,20 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { v4 } from 'uuid';
-import { add } from '../reducers/tasksReducer';
+import { update } from '../reducers/formSlice';
+import { add } from '../reducers/tasksSlice';
 
 const TodoForm = () => {
+  const details = useSelector((state) => state.form);
   const dispatch = useDispatch();
-  const [details, setDetails] = useState('');
 
   const submitHandler = (e) => {
     e.preventDefault();
 
-    const title = details.trim();
+    const title = details.title.trim();
     if (!title) return;
 
     dispatch(add({ id: v4(), title, done: false }));
-    setDetails('');
+    dispatch(update({ title: '' }));
   };
 
   return (
@@ -23,8 +23,8 @@ const TodoForm = () => {
         type="text"
         placeholder="add details"
         className="flex-grow border-2 border-opacity-50 border-gray rounded-xl mr-6 font-medium placeholder-gray focus:border-primary focus:ring-0"
-        value={details}
-        onChange={(e) => setDetails(e.target.value)}
+        value={details.title}
+        onChange={(e) => dispatch(update({ title: e.target.value }))}
       />
       <button
         type="submit"
