@@ -1,16 +1,9 @@
-import { useState } from 'react';
-import TodoItem from './TodoItem';
+import TodoList from './TodoList';
 
 const App = () => {
-  const [checked, setChecked] = useState(false);
-
   return (
     <div>
-      <TodoItem
-        title="Do some coding"
-        done={checked}
-        onToggle={() => setChecked(!checked)}
-      />
+      <TodoList />
     </div>
   );
 };
