@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import EmptyListImage from '../assets/undraw_empty_street_sfxm.svg';
+import PlaceholderImage from '../components/PlaceholderImage';
 import TodoForm from '../components/TodoForm';
 import TodoList from '../components/TodoList';
 import { toggle } from '../reducers/tasksSlice';
@@ -13,12 +14,10 @@ const ActiveTasksPage = () => {
   const renderPlaceholder = () => {
     if (!filtered.length) {
       return (
-        <div className="mx-auto w-80 my-16">
-          <img src={EmptyListImage} alt="" className="block h-80 mb-6" />
-          <p className="text-gray font-medium text-center">
-            You don't have any active tasks
-          </p>
-        </div>
+        <PlaceholderImage
+          src={EmptyListImage}
+          caption="You don't have any active tasks"
+        />
       );
     }
   };

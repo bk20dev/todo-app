@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import EmptyListImage from '../assets/undraw_Imagination_re_i0xi.svg';
+import PlaceholderImage from '../components/PlaceholderImage';
 import TodoList from '../components/TodoList';
-import { toggle, remove, clear } from '../reducers/tasksSlice';
+import { clear, remove, toggle } from '../reducers/tasksSlice';
 
 const CompletedTasksPage = () => {
   const tasks = useSelector((state) => state.tasks);
@@ -25,12 +26,10 @@ const CompletedTasksPage = () => {
   const renderPlaceholder = () => {
     if (!filtered.length) {
       return (
-        <div className="mx-auto w-80 my-16">
-          <img src={EmptyListImage} alt="" className="block h-80 mb-6" />
-          <p className="text-gray font-medium text-center">
-            You don't have any completed tasks
-          </p>
-        </div>
+        <PlaceholderImage
+          src={EmptyListImage}
+          caption="You don't have any completed tasks"
+        />
       );
     }
   };
