@@ -8,7 +8,7 @@ module.exports = {
         gray: '#BDBDBD',
       },
       boxShadow: {
-        primary: '0 0 6px #FBBF24',
+        primary: '0 0 6px rgba(251 191 36 / 50%)',
       },
     },
   },

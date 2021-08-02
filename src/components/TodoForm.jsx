@@ -28,7 +28,7 @@ const TodoForm = () => {
       />
       <button
         type="submit"
-        className="py-4 px-10 bg-primary shadow-primary font-medium text-white rounded-xl"
+        className="py-4 px-10 bg-primary hover:shadow-primary font-medium text-white rounded-xl"
       >
         Add
       </button>
