@@ -25,11 +25,12 @@ const CompletedTasksPage = () => {
   const renderPlaceholder = () => {
     if (!filtered.length) {
       return (
-        <img
-          src={EmptyListImage}
-          alt="No tasks completed"
-          className="block mx-auto w-80 h-80 my-16"
-        />
+        <div className="mx-auto w-80 my-16">
+          <img src={EmptyListImage} alt="" className="block h-80 mb-6" />
+          <p className="text-gray font-medium text-center">
+            You don't have any completed tasks
+          </p>
+        </div>
       );
     }
   };

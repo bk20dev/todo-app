@@ -2,11 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const taskReducer = createSlice({
   name: 'tasks',
-  initialState: [
-    { id: 1, title: 'Do coding challenges', done: false },
-    { id: 2, title: 'Take out the trash', done: true },
-    { id: 3, title: 'Do the washing up', done: true },
-  ],
+  initialState: [],
   reducers: {
     add(tasks, action) {
       tasks.push(action.payload);
