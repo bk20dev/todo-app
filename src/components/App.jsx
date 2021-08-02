@@ -1,8 +1,10 @@
+import TodoForm from './TodoForm';
 import TodoList from './TodoList';
 
 const App = () => {
   return (
-    <div>
+    <div className="font-medium">
+      <TodoForm />
       <TodoList />
     </div>
   );
