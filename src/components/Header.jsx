@@ -17,7 +17,7 @@ const Header = () => {
   const { pathname } = useLocation();
 
   return (
-    <header>
+    <header className="mb-6">
       <h1 className="font-bold text-4xl text-center py-8">#todo</h1>
       <div className="flex justify-between px-6 overflow-x-auto">
         <HeaderTab path="/" active={pathname === '/'}>

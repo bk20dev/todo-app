@@ -1,6 +1,11 @@
 import TodoItem from './TodoItem';
 
-const TodoList = ({ tasks, onToggle }) => (
+const TodoList = ({
+  tasks,
+  onToggle,
+  showDelete = false,
+  onDelete = () => {},
+}) => (
   <div className="flex flex-col gap-3">
     {tasks.map(({ id, title, done }) => (
       <TodoItem
@@ -8,6 +13,8 @@ const TodoList = ({ tasks, onToggle }) => (
         title={title}
         done={done}
         onToggle={() => onToggle(id)}
+        showDelete={showDelete}
+        onDelete={() => onDelete(id)}
       />
     ))}
   </div>

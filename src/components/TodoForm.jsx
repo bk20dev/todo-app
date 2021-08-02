@@ -18,7 +18,7 @@ const TodoForm = () => {
   };
 
   return (
-    <form className="flex py-6" onSubmit={submitHandler}>
+    <form className="flex mb-6" onSubmit={submitHandler}>
       <input
         type="text"
         placeholder="add details"

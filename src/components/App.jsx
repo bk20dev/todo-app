@@ -1,6 +1,7 @@
 import { BrowserRouter, Route } from 'react-router-dom';
 import ActiveTasksPage from '../pages/ActiveTasksPage';
 import AllTasksPage from '../pages/AllTasksPage';
+import CompletedTasksPage from '../pages/CompletedTasksPage';
 import Footer from './Footer';
 import Header from './Header';
 
@@ -11,9 +12,7 @@ const App = () => {
         <Header />
         <Route path="/" exact component={AllTasksPage} />
         <Route path="/active" component={ActiveTasksPage} />
-        <Route path="/completed">
-          <h1>Completed</h1>
-        </Route>
+        <Route path="/completed" component={CompletedTasksPage} />
       </BrowserRouter>
       <Footer />
     </div>
