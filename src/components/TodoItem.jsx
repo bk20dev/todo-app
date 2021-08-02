@@ -1,5 +1,5 @@
 const TodoItem = ({ title, done, onToggle }) => (
-  <label className="flex items-center">
+  <label className="flex items-center font-medium">
     <input
       type="checkbox"
       className="transition-colors mr-2 w-5 h-5 rounded-full text-primary focus:ring-primary"
